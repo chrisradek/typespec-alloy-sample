@@ -6,7 +6,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "build-src": "babel src -d dist/src --extensions '.ts,.tsx'",
-    "build": "rm -r dist && tsc -p . && npm run build-src",
+    "build": "tsc -p . && npm run build-src",
     "watch-src": "babel src -d dist/src --extensions '.ts,.tsx' --watch",
     "watch-tsc": "tsc -p . --watch",
     "watch": "concurrently --kill-others \"npm run watch-tsc\" \"npm run watch-src\"",
@@ -34,5 +34,6 @@
     "prettier": "^3.4.2",
     "typescript": "^5.5.3",
     "vitest": "^2.0.3"
-  }
+  },
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
 }
